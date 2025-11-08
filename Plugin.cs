@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using BepInEx;
 using GorillaGameModes;
 using GorillaNetworking;
@@ -8,7 +8,7 @@ using Utilla;
 using Utilla.Attributes;
 using Utilla.Models;
 
-namespace yo
+namespace AutoConnect
 {
 	/// <summary>
 	/// This is your mod's main class.
@@ -27,8 +27,7 @@ namespace yo
 		{
 			/* A lot of Gorilla Tag systems will not be set up when start is called /*
 			/* Put code in OnGameInitialized to avoid null references */
-
-			Utilla.Events.GameInitialized += OnGameInitialized;
+			Events.GameInitialized += OnGameInitialized;
 		}
 
 		void OnEnable()
@@ -50,8 +49,14 @@ namespace yo
 
 		void OnGameInitialized(object sender, EventArgs e)
 		{
-			/* Code here runs after the game initializes (i.e. GorillaLocomotion.Player.Instance != null) */
-		}
+            WatchableStringSO s = new WatchableStringSO
+            {
+                Value = "MODDED_Casual"
+            };
+            g = false;
+            GorillaComputer.instance.currentGameMode = s;
+            GorillaComputer.instance.GetJoinTriggerForZone("forest").OnBoxTriggered();
+        }
 
 		void Update()
 		{
