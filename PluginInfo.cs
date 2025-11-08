@@ -5,8 +5,9 @@
 	/// </summary>
 	class PluginInfo
 	{
-		public const string GUID = "com.mudanimates.gorillatag.yo";
-		public const string Name = "yo";
+		public const string GUID = "com.mudanimates.gorillatag.autoconnect";
+		public const string Name = "AutoConnect";
 		public const string Version = "1.0.0";
 	}
 }
+
