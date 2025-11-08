@@ -2,7 +2,7 @@
 using System.Reflection;
 using HarmonyLib;
 
-namespace yo
+namespace AutoConnect
 {
 	/// <summary>
 	/// This class handles applying harmony patches to the game.
@@ -39,3 +39,4 @@ namespace yo
 		}
 	}
 }
+
