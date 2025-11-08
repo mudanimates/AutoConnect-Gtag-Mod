@@ -1,4 +1,4 @@
-﻿namespace yo
+﻿namespace AutoConnect
 {
 	/// <summary>
 	/// This class is used to provide information about your mod to BepInEx.
@@ -10,4 +10,5 @@
 		public const string Version = "1.0.0";
 	}
 }
+
 
